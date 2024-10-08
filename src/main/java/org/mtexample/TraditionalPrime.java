@@ -18,16 +18,15 @@ public class TraditionalPrime implements PrimeAlgo {
     }
 
     private boolean isPrime(int num) {
-        if (num < 2) return false; // Numbers less than 2 are not prime
-        if (num == 2) return true; // 2 is prime
+        if (num < 2) return false;
+        if (num == 2) return true;
 
-        // Check divisibility from 2 to sqrt(num)
         for (int i = 2; i * i <= num; i++) {
             if (num % i == 0) {
-                return false; // Found a divisor, so num is not prime
+                return false;
             }
         }
 
-        return true; // No divisors found, so num is prime
+        return true;
     }
 }

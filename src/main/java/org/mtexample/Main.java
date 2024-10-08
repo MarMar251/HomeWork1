@@ -5,12 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            // Display menu options
             System.out.println("Choose a prime number algorithm:");
             System.out.println("1. Traditional Prime Checker ");
             System.out.println("2. Eratosthenes Sieve");
@@ -32,13 +30,12 @@ public class Main {
                     break;
                 case 0:
                     System.out.println("Exiting...");
-                    continue; // Exit the loop
+                    continue;
                 default:
                     System.out.println("Invalid choice. Please try again.");
-                    continue; // Prompt again for valid input
+                    continue;
             }
 
-            // Get user input for start, end, and number of threads
             System.out.print("Enter start of range: ");
             int startRange = scanner.nextInt();
             System.out.print("Enter end of range: ");
@@ -57,7 +54,6 @@ public class Main {
 
         } while (choice != 0);
 
-        scanner.close(); // Close the scanner resource
-
+        scanner.close();
     }
 }
